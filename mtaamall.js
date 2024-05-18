@@ -1,4 +1,3 @@
-// script.js
 let lastScrollTop = 0;
 const navbar = document.getElementById('navbar');
 
