@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MtaaMall</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="states-barbershop.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="./assets/images/logo.png">
+  <link rel="preload" as="image" href="./assets/images/hero-banner-1.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-banner-2.jpg">
+  <link rel="preload" as="image" href="./assets/images/hero-banner-3.jpg">
+  <style>
+    .preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1001;
+    }
+    
+    .pac-man {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background: #ff0800;
+        position: relative;
+        animation: pac-man-animation 0.5s infinite;
+    }
+
+    .pac-man::before, .pac-man::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: #fff;
+    }
+
+    .pac-man::before {
+        top: 5px;
+        left: 0;
+        width: 50%;
+        height: 50%;
+        transform: rotate(-45deg);
+        transform-origin: 100% 100%;
+    }
+
+    .pac-man::after {
+        bottom: 5px;
+        left: 0;
+        width: 50%;
+        height: 50%;
+        transform: rotate(45deg);
+        transform-origin: 100% 0%;
+    }
+
+    @keyframes pac-man-animation {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(45deg);
+        }
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    .dots {
+        display: flex;
+        align-items: center;
+    }
+
+    .dot {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #000;
+        margin-left: 10px;
+        animation: dot-animation 0.5s infinite;
+    }
+
+    .dot:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    .dot:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .dot:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+
+    @keyframes dot-animation {
+        0%, 100% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(0.5);
+        }
+    }
+  </style>
+</head>
+
+<body id="top">
+  <div class="preloader">
+    <div class="pac-man"></div>
+    <div class="dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</div>
+  <header class="header">
+
+    <div class="alert">
+      <div class="container">
+        <p class="alert-text">Where we unleash the power of endless possibilities with every click.</p>
+      </div>
+    </div>
+
+    <div class="header-top" data-header>
+      <div class="container">
+
+        <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+          <span class="line line-1"></span>
+          <span class="line line-2"></span>
+          <span class="line line-3"></span>
+        </button>
+
+        <div class="input-wrapper">
+          <input type="search" name="search" placeholder="Search product" class="search-field">
+
+          <button class="search-submit" aria-label="search">
+            <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <a href="#" class="logo">
+          <h1>MtaaMall</h1>
+        </a>
+
+        <div class="header-actions">
+
+          <button class="header-action-btn" aria-label="user">
+            <ion-icon name="person-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
+          </button>
+
+          <button class="header-action-btn" aria-label="favourite item">
+            <ion-icon name="star-outline" aria-hidden="true" aria-hidden="true"></ion-icon>
+
+            <span class="btn-badge">0</span>
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+
+
+
+
+  <div class="sidebar">
+    <div class="mobile-navbar" data-navbar>
+
+      <div class="wrapper">
+        <a href="#" class="logo">
+          <img src="./assets/images/logo.png" width="179" height="26" alt="Glowing">
+        </a>
+
+        <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+          <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="navbar-list">
+
+        <li>
+          <a href="#home" class="navbar-link" data-nav-link>Home</a>
+        </li>
+
+        <li>
+          <a href="#collection" class="navbar-link" data-nav-link>Collection</a>
+        </li>
+
+        <li>
+          <a href="#shop" class="navbar-link" data-nav-link>Shop</a>
+        </li>
+
+        <li>
+          <a href="#offer" class="navbar-link" data-nav-link>Offer</a>
+        </li>
+
+        <li>
+          <a href="#blog" class="navbar-link" data-nav-link>Blog</a>
+        </li>
+
+      </ul>
+
+    </div>
+
+    <div class="overlay" data-nav-toggler data-overlay></div>
+  </div>
+
+
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+      <h1>States Barbershop</h1>
+      <section class="section hero" id="home" aria-label="hero" data-section>
+        <div class="wrapper">
+          <div class="containere">
+              <input type="radio" name="slide" id="c1" checked>
+              <label for="c1" class="card">
+                  <div class="row">
+                      <div class="icon">1</div>
+                      <div class="description">
+                          <h4>Gallery</h4>
+                          
+                      </div>
+                  </div>
+              </label>
+              <input type="radio" name="slide" id="c2" >
+              <label for="c2" class="card">
+                  <div class="row">
+                      <div class="icon">2</div>
+                      <div class="description">
+                       
+                      </div>
+                  </div>
+              </label>
+              <input type="radio" name="slide" id="c3" >
+              <label for="c3" class="card">
+                  <div class="row">
+                      <div class="icon">3</div>
+                      <div class="description">
+                         
+                      </div>
+                  </div>
+              </label>
+              <input type="radio" name="slide" id="c4" >
+              <label for="c4" class="card">
+                  <div class="row">
+                      <div class="icon">4</div>
+                      <div class="description">
+                       
+                      </div>
+                  </div>
+              </label>
+              <input type="radio" name="slide" id="c5" >
+              <label for="c5" class="card">
+                  <div class="row">
+                      <div class="icon">5</div>
+                      <div class="description">
+                        
+                      </div>
+                  </div>
+              </label>
+              <input type="radio" name="slide" id="c6" >
+              <label for="c6" class="card">
+                  <div class="row">
+                      <div class="icon">6</div>
+                      <div class="description">
+                        
+                      </div>
+                  </div>
+              </label>
+              <input type="radio" name="slide" id="c6" >
+              <label for="c7" class="card">
+                  <div class="row">
+                      <div class="icon">7</div>
+                      <div class="description">
+                        
+                  </div>
+              </label>
+          </div>
+      </div>
+    </article>
+</main>
+
+
+
+<footer class="footer" data-section>
+  <div class="container">
+
+    <div class="footer-top">
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="footer-list-title">Store Locations</p>
+        </li>
+
+        <li>
+          <p class="footer-list-text">
+            Find a location nearest you. See <a href="#" class="link">Our Stores</a>
+          </p>
+        </li>
+
+        <li>
+          <p class="footer-list-text bold">+254 759442583</p>
+        </li>
+
+        <li>
+          <p class="footer-list-text">mtaamall@gmail.com</p>
+        </li>
+
+      </ul>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="footer-list-title">Useful links</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Hot deals</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Verified stores</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Bundle & Save</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Loyalty Card</a>
+        </li>
+
+      </ul>
+
+      <ul class="footer-list">
+
+        <li>
+          <p class="footer-list-title">Infomation</p>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Contact Us</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Terms & Conditions</a>
+        </li>
+
+        <li>
+          <a href="#" class="footer-link">Privacy Policy</a>
+        </li>
+
+      </ul>
+
+      <div class="footer-list">
+
+        <p class="newsletter-title">Promo emails.</p>
+
+        <p class="newsletter-text">
+          Enter your email below to be the first to know about deals about promotions.
+        </p>
+
+        <form action="" class="newsletter-form">
+          <input type="email" name="email_address" placeholder="Enter your email address" required
+            class="email-field">
+
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+      <div class="wrapper">
+        <p class="copyright">
+          &copy; 2024 @gregcodes
+        </p>
+
+        <ul class="social-list">
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+      <a href="#" class="logo">
+        <h1>MtaaMall</h1>
+      </a>
+
+      
+
+    </div>
+
+  </div>
+</footer>
+
+
+<a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+  <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
+</a>
+
+
+<script src="states-barbershop.js" defer></script>
+
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+<script>
+ 
+  window.addEventListener('load', () => {
+      const preloader = document.querySelector('.preloader');
+      preloader.style.display = 'none';
+  });
+</script>
+</body>
+
+</html>

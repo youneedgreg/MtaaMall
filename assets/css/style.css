@@ -16,15 +16,8 @@
   --white: hsl(0, 0%, 100%);
   --black: hsl(0, 0%, 0%);
 
-  /**
-   * gradient color
-   */
+   --gradient: linear-gradient(to right, transparent 50%, var(--white_30) 100%);
 
-  --gradient: linear-gradient(to right, transparent 50%, var(--white_30) 100%);
-
-  /**
-   * typography
-   */
 
   --ff-urbanist: 'Urbanist', sans-serif;
 
@@ -44,9 +37,7 @@
   --fw-700: 700;
   --fw-800: 800;
 
-  /**
-   * spacing
-   */
+
 
   --section-padding: 35px;
 

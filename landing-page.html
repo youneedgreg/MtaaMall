@@ -154,6 +154,25 @@
         <a href="#" class="logo">
           <h1>MtaaMall</h1>
         </a>
+        <div class="hidden md:ml-6 md:block">
+          <div class="flex space-x-2">
+            <a
+              href="/index.html"
+              class="text-white bg-black hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
+              >Home</a
+            >
+            <a
+              href="/properties.html"
+              class="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
+              >Properties</a
+            >
+            <a
+              href="/add-property.html"
+              class="text-white hover:bg-gray-900 hover:text-white rounded-md px-3 py-2"
+              >Add Property</a
+            >
+          </div>
+        </div>
 
         <div class="header-actions">
 
@@ -1150,31 +1169,18 @@
   </footer>
 
 
-
-
-
-  <!-- 
-    - #BACK TO TOP
-  -->
-
   <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
     <ion-icon name="arrow-up" aria-hidden="true"></ion-icon>
   </a>
 
 
-
-
-
-  <!-- 
-    - custom js link
-  -->
   <script src="./assets/js/script.js" defer></script>
 
 
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script>
-    // JavaScript to hide the preloader once the page has fully loaded
+   
     window.addEventListener('load', () => {
         const preloader = document.querySelector('.preloader');
         preloader.style.display = 'none';
